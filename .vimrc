@@ -8,7 +8,11 @@ set undolevels=1000
 
 " シンタックスハイライト設定
 syntax on
-set nohlsearch
+
+" インデント設定
+set cindent
+set shiftwidth=4
+set expandtab " タブ文字を\tじゃなくスペースにする
 
 " 行数表示設定
 set number
@@ -16,7 +20,9 @@ set wrap
 
 " 検索設定
 set incsearch
+set smartcase
 set ignorecase
+set hlsearch
 
 " コマンドモードの入力補完設定
 set wildmenu wildmode=list:full
