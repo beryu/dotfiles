@@ -67,3 +67,7 @@ nmap ,U :e ++enc=utf-8<CR>
 nmap ,E :e ++enc=euc-jp<CR>
 nmap ,S :e ++enc=cp932<CR>
 
+" バックアップ設定
+set backup
+set backupdir=$HOME/.vim/backup
+let &directory = &backupdir
