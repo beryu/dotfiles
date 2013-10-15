@@ -54,7 +54,8 @@ call neobundle#rc(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " 読み込むプラグインを記載
-" NeoBundle 'PluginName'
+NeoBundle 'alpaca-tc/alpaca_powertabline'
+NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
 
 " 読み込んだプラグインも含め、ファイルタイプの検出、ファイルタイプ別プラグイン/インデントを有効化する
 filetype plugin indent on
@@ -71,3 +72,6 @@ nmap ,S :e ++enc=cp932<CR>
 set backup
 set backupdir=$HOME/.vim/backup
 let &directory = &backupdir
+
+" タイトル設定
+set title
