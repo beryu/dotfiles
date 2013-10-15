@@ -42,23 +42,8 @@ imap <silent> <C-n> <ESC>:update<CR>:bn<cr>
 vmap <silent> <C-n> <ESC>:update<CR>:bn<cr>
 cmap <silent> <C-n> <ESC>:update<CR>:bn<cr>
 
-" vim起動時のみruntimepathにneobundle.vimを追加
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-" neobundle.vimの初期化
-call neobundle#rc(expand('~/.vim/bundle'))
-
-" neobundle.vimを更新するための設定
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" 読み込むプラグインを記載
-NeoBundle 'alpaca-tc/alpaca_powertabline'
-NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
-
-" 読み込んだプラグインも含め、ファイルタイプの検出、ファイルタイプ別プラグイン/インデントを有効化する
-filetype plugin indent on
+filetype plugin on
+filetype indent on
 
 " デフォルトの文字コードはUTF-8に設定
 set encoding=utf-8
