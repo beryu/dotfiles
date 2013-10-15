@@ -59,6 +59,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " 読み込んだプラグインも含め、ファイルタイプの検出、ファイルタイプ別プラグイン/インデントを有効化する
 filetype plugin indent on
 
+" デフォルトの文字コードはUTF-8に設定
+set encoding=utf-8
+
 " ファイルエンコード変更のショートカット設定
 nmap ,U :e ++enc=utf-8<CR>
 nmap ,E :e ++enc=euc-jp<CR>
