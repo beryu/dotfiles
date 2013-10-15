@@ -6,9 +6,6 @@ set mouse=
 " UNDOできる回数の上限
 set undolevels=1000
 
-" シンタックスハイライト設定
-syntax on
-
 " インデント設定
 set cindent
 set shiftwidth=4
@@ -42,9 +39,6 @@ imap <silent> <C-n> <ESC>:update<CR>:bn<cr>
 vmap <silent> <C-n> <ESC>:update<CR>:bn<cr>
 cmap <silent> <C-n> <ESC>:update<CR>:bn<cr>
 
-filetype plugin on
-filetype indent on
-
 " デフォルトの文字コードはUTF-8に設定
 set encoding=utf-8
 
@@ -60,3 +54,33 @@ let &directory = &backupdir
 
 " タイトル設定
 set title
+
+" NeoBundle
+set nocompatible
+filetype plugin indent off
+
+if has('vim_starting')
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+    call neobundle#rc(expand('~/.vim/bundle/'))
+endif
+
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'VimClojure'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'jpalardy/vim-slime'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'alpaca-tc/alpaca_powertabline'
+NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
+
+set laststatus=2
+set rtp+=~/.vim/neobundle/powerline/powerline/bindings/vim
+
+filetype plugin indent on
+
+" シンタックスハイライト設定
+syntax on
+
