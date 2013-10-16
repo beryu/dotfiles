@@ -49,4 +49,6 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+export HISTSIZE=100000 SAVEHIST=100000 HISTFILE=~/.zhistory
+export EDITOR='/usr/bin/vim'
 
