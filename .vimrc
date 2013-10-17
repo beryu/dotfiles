@@ -75,6 +75,7 @@ NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'alpaca-tc/alpaca_powertabline'
 NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
+NeoBundle 'plasticboy/vim-markdown'
 
 set laststatus=2
 set rtp+=~/.vim/neobundle/powerline/powerline/bindings/vim
@@ -83,4 +84,4 @@ filetype plugin indent on
 
 " シンタックスハイライト設定
 syntax on
-
+let g:vim_markdown_folding_disabled=1 " vim-markdown
